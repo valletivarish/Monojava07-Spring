@@ -1,0 +1,32 @@
+package com.monocept.myapp.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.monocept.myapp.entity.Employee;
+
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
+
+@Repository
+public class EmployeeImpl implements EmployeeDao {
+	EntityManager entityManager;
+
+	public EmployeeImpl(EntityManager entityManager) {
+		super();
+		this.entityManager = entityManager;
+	}
+
+	@Override
+	@Transactional
+	public void addEmployee(Employee employee) {
+		entityManager.persist(employee);
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

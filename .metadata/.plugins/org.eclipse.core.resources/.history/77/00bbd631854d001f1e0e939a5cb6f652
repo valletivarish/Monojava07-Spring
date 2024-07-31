@@ -1,0 +1,149 @@
+package com.monocept.myapp.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.monocept.myapp.entity.Employee;
+import com.monocept.myapp.exception.EmployeeNotFound;
+import com.monocept.myapp.service.EmployeeService;
+
+import jakarta.validation.Valid;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@RestController
+public class EmployeeController {
+
+	private EmployeeService employeeService;
+
+	@Autowired
+	public EmployeeController(EmployeeService employeeService) {
+		super();
+		this.employeeService = employeeService;
+	}
+
+	@GetMapping("employees")
+	public ResponseEntity<List<Employee>> getAllEmployees() {
+		List<Employee> employees = employeeService.getAllEmployees();
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+
+	}
+
+	@GetMapping("employees/{employeeid}")
+	public ResponseEntity<Employee> getEmployeeById(@PathVariable(name = "employeeid") int id) {
+		Employee employee = employeeService.getEmployeeById(id);
+		if (employee == null) {
+			throw new EmployeeNotFound("Employee with id " + id + " not found");
+		}
+		return new ResponseEntity<Employee>(employee, HttpStatus.OK);
+	}
+
+	@PostMapping("employees")
+	public ResponseEntity<Employee> addEmployee(@Valid @RequestBody Employee employee) {
+		Employee employeeTemp = employeeService.saveAndUpdateEmployee(employee);
+		return new ResponseEntity<Employee>(employeeTemp, HttpStatus.CREATED);
+	}
+
+	@PutMapping("employees")
+	public ResponseEntity<Employee> updateEmployee(@Valid @RequestBody Employee employee) {
+		Employee employeeTemp = employeeService.getEmployeeById(employee.getId());
+		if (employeeTemp == null) {
+			throw new EmployeeNotFound("Employee with id " + employee.getId() + " not found");
+		}
+		employeeTemp = employeeService.saveAndUpdateEmployee(employee);
+		return new ResponseEntity<Employee>(employeeTemp, HttpStatus.CREATED);
+	}
+
+	@DeleteMapping("employees/{employeeid}")
+	public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable(name = "employeeid") int id) {
+		Employee employeeTemp = employeeService.getEmployeeById(id);
+		if (employeeTemp == null) {
+			throw new EmployeeNotFound("Employee with id " + id + " not found");
+		}
+		employeeService.deleteEmployee(employeeTemp);
+		return new ResponseEntity<HttpStatus>(HttpStatus.OK);
+	}
+
+	@GetMapping("employees/name/{name}")
+	public ResponseEntity<Employee> getEmployeeByName(@PathVariable(name = "name") String name) {
+		Employee employee1 = employeeService.getEmployeeByName(name);
+		if (employee1 == null) {
+			throw new EmployeeNotFound("Employee with name " + name + " not found");
+		}
+		return new ResponseEntity<Employee>(employee1, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/email/{email}")
+	public ResponseEntity<Employee> getEmployeeByEmail(@PathVariable(name = "email") String email) {
+		Employee employee1 = employeeService.getEmployeeByEmail(email);
+		if (employee1 == null) {
+			throw new EmployeeNotFound("Employee with email " + email + " not found");
+		}
+		return new ResponseEntity<Employee>(employee1, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/activeTrue")
+	public ResponseEntity<List<Employee>> getEmployeeByActiveTrue() {
+		List<Employee> employees = employeeService.getEmployeeByActiveTrue();
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/activeFalse")
+	public ResponseEntity<List<Employee>> getEmployeeByActiveFalse() {
+		List<Employee> employees = employeeService.getEmployeeByActiveFalse();
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/startingWith/{prefix}")
+	public ResponseEntity<List<Employee>> getEmployeeNameStartingWith(@PathVariable(name = "prefix") String prefix) {
+		List<Employee> employees = employeeService.getEmployeeNameStartingWith(prefix);
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/salaryGreaterThanAndDepartement")
+	public ResponseEntity<List<Employee>> getEmployeeSalaryGreaterThanAndDepartment(@RequestBody Employee employee) {
+		List<Employee> employees = employeeService.getEmployeeSalaryGreaterThanAndDepartment(employee.getSalary(),
+				employee.getDesignation());
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/countBySalaryGreaterThan/{salary}")
+	public ResponseEntity<Integer> getEmployeeCountBySalaryGreaterThan(@PathVariable double salary) {
+		int count = employeeService.countSalaryGreaterthan(salary);
+		return new ResponseEntity<Integer>(count, HttpStatus.OK);
+
+	}
+
+	@GetMapping("employees/salaryBetween/{start}/{end}")
+	public ResponseEntity<List<Employee>> getEmployeeSalaryBetween(@PathVariable(name = "start") Double startSalary,
+			@PathVariable(name = "end") Double endSalary) {
+		List<Employee> employees = employeeService.getEmployeeSalaryBetween(startSalary, endSalary);
+		return new ResponseEntity<List<Employee>>(employees, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/countAndActive")
+	public ResponseEntity<Integer> getEmployeeCountAndActive() {
+		int count = employeeService.getEmployeeCountAndActive();
+		return new ResponseEntity<Integer>(count, HttpStatus.OK);
+	}
+
+	@GetMapping("employees/CountTheDesignation/{designation}")
+	public ResponseEntity<Integer> getEmployeeCountAndDesignation(
+			@PathVariable(name = "designation") String designation) {
+		int count = employeeService.getEmployeeCountAndDesignation(designation);
+		return new ResponseEntity<Integer>(count, HttpStatus.OK);
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.monocept.myapp.dao;
+
+import com.monocept.myapp.entity.Employee;
+
+public interface EmployeeDao {
+
+	void addEmployee(Employee employee);
+
+}

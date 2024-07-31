@@ -1,0 +1,39 @@
+package com.monocept.myapp.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.monocept.myapp.model.MailStructure;
+import com.monocept.myapp.service.Service;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
+@RestController
+@RequestMapping("/mail")
+public class MailController {
+	
+	
+	private Service service;
+	
+	
+	
+	public MailController(Service service) {
+		super();
+		this.service = service;
+	}
+
+
+
+	@PostMapping("/send/{email}")
+	public String postMethodName(@PathVariable(name = "email")String mail , @RequestBody MailStructure mailStructure) {
+		if(service.sendEmail(mail, mailStructure)) {
+			return "sent Succesfull";
+		}
+		return "fail to send";
+		
+}
+
+}

@@ -1,0 +1,5 @@
+package com.monocept.myapp.exeception;
+
+public class ResponseErrorNotFound {
+
+}

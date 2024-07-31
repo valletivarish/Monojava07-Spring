@@ -1,0 +1,10 @@
+package com.monocept.myapp.repository;
+
+
+import com.monocept.myapp.entity.Student;
+
+public interface StudentRepository {
+
+
+
+}

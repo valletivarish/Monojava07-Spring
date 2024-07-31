@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=01-spring-dependency-inversion/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.demo.model{Instructor.java[Instructor" modifiers="513" timestamp="1721376006754"/>
+    <typeInfo handle="=01-spring-dependency-inversion/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.demo.model{Resource.java[Resource" modifiers="513" timestamp="1721375939911"/>
+    <typeInfo handle="=02-spring-hibernate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1721807553274"/>
+    <typeInfo handle="=03-spring-rest-hibernate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1721893897276"/>
+    <typeInfo handle="=03-spring-rest-hibernate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.service{StudentService.java[StudentService" modifiers="513" timestamp="1721973445377"/>
+    <typeInfo handle="=05-spring-rest-jpa-emp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.service{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1722413178532"/>
+</typeInfoHistroy>

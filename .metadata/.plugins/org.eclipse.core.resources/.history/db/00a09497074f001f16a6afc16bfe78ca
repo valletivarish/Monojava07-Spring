@@ -1,0 +1,5 @@
+package com.monocept.myapp.controller.util;
+
+public class PageResponse {
+
+}

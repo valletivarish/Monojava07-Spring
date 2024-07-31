@@ -1,0 +1,7 @@
+package com.monocept.myapp.dao;
+
+public interface EmployeeDao {
+
+	void addEmployee();
+
+}

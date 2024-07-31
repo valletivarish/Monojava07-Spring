@@ -1,0 +1,5 @@
+package com.monocept.myapp.model;
+
+public class MailStructure {
+
+}

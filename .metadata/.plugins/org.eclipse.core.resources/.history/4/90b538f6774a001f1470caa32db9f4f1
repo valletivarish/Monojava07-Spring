@@ -1,0 +1,32 @@
+package com.monocept.myapp.exception;
+
+import java.time.LocalDate;
+
+public class ResponseErrorNotFound {
+	private int status;
+	private String message;
+	private LocalDate date;
+	public ResponseErrorNotFound() {
+		super();
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
+	
+}

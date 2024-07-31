@@ -1,0 +1,5 @@
+package com.monocept.myapp.dao;
+
+public class EmployeeImpl implements EmployeeDao {
+
+}

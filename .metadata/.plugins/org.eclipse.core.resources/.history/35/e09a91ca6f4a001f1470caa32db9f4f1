@@ -1,0 +1,63 @@
+package com.monocept.myapp.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.monocept.myapp.dao.StudentDao;
+import com.monocept.myapp.entity.Student;
+
+
+@RestController
+public class StudentController {
+	
+	private StudentDao studentDao;
+	
+	
+	public StudentController(StudentDao studentDao) {
+		super();
+		this.studentDao = studentDao;
+	}
+
+
+	@GetMapping("students")
+	public List<Student> getAllStudents() {
+		List<Student> students=studentDao.getAllStudents();
+		return students;
+	}
+	@GetMapping("students/{sid}")
+	public Student getStudentById(@PathVariable(name = "sid")int id) {
+		Student student=studentDao.getStudentById(id);
+		return student;
+	}
+	@PostMapping("students")
+	public Student addStudent(@RequestBody Student student) {
+		Student student1 = studentDao.saveAndUpdate(student);
+		return student1;
+	}
+	
+	@PutMapping("students")
+	public Student updateStudent(@RequestBody Student student) {
+		if(student.getId()!=0) {
+			Student student1=studentDao.saveAndUpdate(student);
+			return student1;
+		}
+		System.out.println("not found");
+		return null;
+	}
+	@DeleteMapping("students/{sid}")
+	public String deleteStudent(@PathVariable(name = "sid") int id) {
+		studentDao.deleteStudent(id);
+		return "deleted";
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,38 @@
+package com.monocept.myapp.exception;
+
+import java.time.LocalDateTime;
+
+public class EmployeeResponseError {
+	private String message;
+	private LocalDateTime timeStamp;
+	private int errorCode;
+	public EmployeeResponseError(String message, LocalDateTime timeStamp, int errorCode) {
+		super();
+		this.message = message;
+		this.timeStamp = timeStamp;
+		this.errorCode = errorCode;
+	}
+	public EmployeeResponseError() {
+		super();
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public LocalDateTime getTimeStamp() {
+		return timeStamp;
+	}
+	public void setTimeStamp(LocalDateTime timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+	public int getErrorCode() {
+		return errorCode;
+	}
+	public void setErrorCode(int errorCode) {
+		this.errorCode = errorCode;
+	}
+	
+	
+}

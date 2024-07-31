@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Employee.java&apos; to &apos;05-spring-rest-jpa-emp/src/main/java/com.monocept.myapp.dto&apos;&#x0D;&#x0A;- Original project: &apos;05-spring-rest-jpa-emp&apos;&#x0D;&#x0A;- Destination element: &apos;05-spring-rest-jpa-emp/src/main/java/com.monocept.myapp.dto&apos;&#x0D;&#x0A;- Original element: &apos;com.monocept.myapp.entity.Employee.java&apos;" description="Copy compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.dto" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.monocept.myapp.entity{Employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1722257108772" units="1" version="1.0"/>
+</session>

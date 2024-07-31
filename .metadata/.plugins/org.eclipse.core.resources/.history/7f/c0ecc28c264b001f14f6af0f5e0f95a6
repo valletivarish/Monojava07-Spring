@@ -1,0 +1,13 @@
+package com.monocept.myapp.service;
+
+import java.util.List;
+
+import com.monocept.myapp.entity.Employee;
+
+public interface EmployeeService {
+
+	List<Employee> getAllEmployees();
+
+	Employee getEmployeeById(int id);
+
+}

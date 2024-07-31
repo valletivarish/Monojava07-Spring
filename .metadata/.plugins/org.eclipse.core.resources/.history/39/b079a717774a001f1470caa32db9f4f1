@@ -1,0 +1,7 @@
+package com.monocept.myapp.exeception;
+
+public class StudentNotFoundExeception extends RuntimeException{
+	public StudentNotFoundExeception(String message) {
+		super(message);
+	}
+}

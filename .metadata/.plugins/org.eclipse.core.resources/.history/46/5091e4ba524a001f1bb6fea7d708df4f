@@ -1,0 +1,15 @@
+package com.monocept.myapp.dao;
+
+import java.util.List;
+
+import com.monocept.myapp.entity.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+	@Override
+	public List<Student> getAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
