@@ -1,7 +1,0 @@
-package com.monocept.myapp.exception;
-
-public class EmployeeNotFound extends RuntimeException{
-	public EmployeeNotFound(String message) {
-		super(message);
-	}
-}

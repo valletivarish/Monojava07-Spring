@@ -9,12 +9,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.monocept.myapp.controller.util.PagedResponse;
 import com.monocept.myapp.dto.EmployeeDTO;
 import com.monocept.myapp.dto.EmployeeResponseDTO;
 import com.monocept.myapp.entity.Employee;
 import com.monocept.myapp.exception.EmployeeNotFoundException;
 import com.monocept.myapp.repository.EmployeeRepository;
+import com.monocept.myapp.util.PagedResponse;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -27,24 +27,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public PagedResponse<EmployeeDTO> getAllEmployees(int page, int size, String sortBy, String direction) {
-		Sort sort=null;
-		if(direction.equalsIgnoreCase(Sort.Direction.DESC.name())) {
-			sort=Sort.by(sortBy).descending();
-		}
-		else {
-			sort=Sort.by(sortBy).ascending();
-		}
+	public PagedResponse<EmployeeResponseDTO> getAllEmployees(int page, int size, String sortBy, String direction) {
 
-		Pageable pageable = PageRequest.of(page, size, sort);
+		Pageable pageable = getPageable(page, size, sortBy, direction);
 
 		Page<Employee> pages = employeeRepository.findAll(pageable);
 		List<Employee> employees = pages.getContent();
 		if (employees.isEmpty()) {
 			throw new EmployeeNotFoundException("No employee found add some");
 		}
-		List<EmployeeDTO> employeesDTO = convertEmployeeListToEmployeeDtoList(pages.getContent());
-		return new PagedResponse<EmployeeDTO>(employeesDTO, pages.getNumber(), pages.getSize(),
+		List<EmployeeResponseDTO> employeesDTO = convertEmployeeListToEmployeeResponseDTOList(pages.getContent());
+		return new PagedResponse<EmployeeResponseDTO>(employeesDTO, pages.getNumber(), pages.getSize(),
 				pages.getTotalElements(), pages.getTotalPages(), pages.isLast());
 	}
 
@@ -150,21 +143,26 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public List<EmployeeDTO> getEmployeeByActiveTrue() {
-		List<Employee> employees = employeeRepository.findByActiveTrue();
-		if (employees.isEmpty()) {
+	public PagedResponse<EmployeeDTO> getEmployeeByActiveTrue(int page,int size,String sortBy,String direction) {
+		Pageable pageable = getPageable(page, size, sortBy, direction);
+		Page<Employee> pages = employeeRepository.findByActiveTrue(pageable);
+		if (pages.getContent()==null) {
 			throw new EmployeeNotFoundException("No Employee is Active Currently");
 		}
-		return convertEmployeeListToEmployeeDtoList(employees);
+		List<EmployeeDTO> employeeDtoList = convertEmployeeListToEmployeeDtoList(pages.getContent());
+		return new PagedResponse<EmployeeDTO>(employeeDtoList, pages.getNumber(), pages.getSize(), pages.getTotalElements(),pages.getTotalPages(), pages.isLast());
 	}
 
 	@Override
-	public List<EmployeeDTO> getEmployeeByActiveFalse() {
-		List<Employee> employees = employeeRepository.findByActiveFalse();
+	public PagedResponse<EmployeeDTO> getEmployeeByActiveFalse(int page,int size,String sortBy, String direction) {
+		Pageable pageable=getPageable(page, size, sortBy, direction);
+		Page<Employee> page1 = employeeRepository.findByActiveFalse(pageable);
+		List<Employee> employees=page1.getContent();
 		if (employees.isEmpty()) {
 			throw new EmployeeNotFoundException("Employees are Active Currently");
 		}
-		return convertEmployeeListToEmployeeDtoList(employees);
+		List<EmployeeDTO> toEmployeeDtoList = convertEmployeeListToEmployeeDtoList(employees);
+		return new PagedResponse<>(toEmployeeDtoList, page1.getNumber(), page1.getSize(), page1.getTotalElements(), page1.getTotalPages(), page1.isLast());
 	}
 
 	@Override
@@ -177,32 +175,53 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public List<EmployeeDTO> getEmployeeNameStartingWith(String prefix) {
-		List<Employee> employees = employeeRepository.findByNameStartingWith(prefix);
+	public PagedResponse<EmployeeDTO> getEmployeeNameStartingWith(String prefix,int page,int size, String sortBy,String direction) {
+		Pageable pageable = getPageable(page, size, sortBy, direction);
+		Page<Employee> pageEmployees = employeeRepository.findByNameStartingWith(prefix,pageable);
+		List<Employee> employees=pageEmployees.getContent();
 		if (employees.isEmpty()) {
 			throw new EmployeeNotFoundException("No Employee starts with " + prefix);
 		}
-		return convertEmployeeListToEmployeeDtoList(employees);
+		List<EmployeeDTO> employeeDtoList = convertEmployeeListToEmployeeDtoList(employees);
+		return new PagedResponse<>(employeeDtoList, pageEmployees.getNumber(), pageEmployees.getSize(), pageEmployees.getTotalElements(), pageEmployees.getTotalPages(), pageEmployees.isLast());
 	}
 
 	@Override
-	public List<EmployeeDTO> getEmployeeSalaryGreaterThanAndDepartment(double salary, String designation) {
-		List<Employee> employees = employeeRepository.findBySalaryGreaterThanAndDesignation(salary, designation);
+	public PagedResponse<EmployeeDTO> getEmployeeSalaryGreaterThanAndDepartment(double salary, String designation,int page,int size, String sortBy, String direction) {
+		Pageable pageable = getPageable(page,size,sortBy,direction);
+		Page<Employee> pageEmployees = employeeRepository.findBySalaryGreaterThanAndDesignation(salary, designation,pageable);
+		List<Employee> employees=pageEmployees.getContent();
+		System.out.println(pageEmployees);
 		if (employees.isEmpty()) {
 			throw new EmployeeNotFoundException("No Employee matches with the condition : 'salary greater than the '"
 					+ salary + "'designation'" + designation);
 		}
-		return convertEmployeeListToEmployeeDtoList(employees);
+		List<EmployeeDTO> employeeDtoList = convertEmployeeListToEmployeeDtoList(employees);
+		return new PagedResponse<>(employeeDtoList, pageEmployees.getNumber(), pageEmployees.getSize(), pageEmployees.getTotalElements(), pageEmployees.getTotalPages(), pageEmployees.isLast());
 	}
 
+	private Pageable getPageable(int page, int size, String sortBy, String direction) {
+	    Sort sort = Sort.by(sortBy);
+	    if (direction.equalsIgnoreCase(Sort.Direction.DESC.name())) {
+	        sort = sort.descending();
+	    } else {
+	        sort = sort.ascending();
+	    }
+	    return PageRequest.of(page, size, sort);
+	}
+
+
 	@Override
-	public List<EmployeeDTO> getEmployeeSalaryBetween(Double startSalary, Double endSalary) {
-		List<Employee> employees = employeeRepository.findBySalaryBetween(startSalary, endSalary);
+	public PagedResponse<EmployeeDTO> getEmployeeSalaryBetween(Double startSalary, Double endSalary,int page,int size,String sortBy,String direction) {
+		Pageable pageable=getPageable(page, size, sortBy, direction);
+		Page<Employee> pageEmployees = employeeRepository.findBySalaryBetween(startSalary, endSalary, pageable);
+		List<Employee> employees=pageEmployees.getContent();
 		if (employees.isEmpty()) {
 			throw new EmployeeNotFoundException(
 					"No Employee matches with the condition : 'salary between '" + startSalary + " 'and' " + endSalary);
 		}
-		return convertEmployeeListToEmployeeDtoList(employees);
+		List<EmployeeDTO> employeeDtoList = convertEmployeeListToEmployeeDtoList(employees);
+		return new PagedResponse<>(employeeDtoList, pageEmployees.getNumber(), pageEmployees.getSize(), pageEmployees.getTotalElements(), pageEmployees.getTotalPages(), pageEmployees.isLast());
 	}
 
 	@Override

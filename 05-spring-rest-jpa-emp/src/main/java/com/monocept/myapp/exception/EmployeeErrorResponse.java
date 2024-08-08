@@ -36,7 +36,7 @@ public class EmployeeErrorResponse {
 	}
 	@Override
 	public String toString() {
-		return "StudentErrorResponse [status=" + status + ", message=" + message + ", timeStamp=" + timeStamp + "]";
+		return "EmployeeErrorResponse [status=" + status + ", message=" + message + ", timeStamp=" + timeStamp + "]";
 	}
 	
 	

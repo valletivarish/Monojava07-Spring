@@ -1,0 +1,1474 @@
+2024-08-07 12:01:10 INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 12:01:10 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 12:01:10 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 12:01:10 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:01:10 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:01:10 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:01:10 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:01:10 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:01:10 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikirachcavvcvvaaxcand9vscsx]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:01:10 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikircachccancvvdvxv9c@gmavsxicl.com]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:01:10 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 12:01:10 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikircachccancvvdvxv9c@gmavsxicl.com]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [saikiran]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$uL5Lq5XCMmAL3KqHSE4D/O07JOAZusYsWzI5Fjdo.anz9IOqpMlJi]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [saikirachcavvcvvaaxcand9vscsx]
+2024-08-07 12:01:10 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [39]
+2024-08-07 12:01:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 12:56:46 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 5596 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 12:56:46 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 12:56:46 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 12:56:46 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07 12:56:46 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07 12:56:46 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 12:56:46 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-08-07 12:56:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 12:56:47 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 12:56:47 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 12:56:47 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 12:56:47 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1625 ms
+2024-08-07 12:56:47 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 12:56:48 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-07 12:56:48 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 12:56:48 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 12:56:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-07 12:56:48 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a842467
+2024-08-07 12:56:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-07 12:56:49 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 12:56:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 12:56:49 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 12:56:49 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 12:56:49 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 12:56:50 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 12:56:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 12:56:50 INFO  com.monocept.myapp.Application - Started Application in 4.823 seconds (process running for 5.477)
+2024-08-07 12:57:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 12:57:19 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 12:57:19 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 12:57:20 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:57:20 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:57:20 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:57:20 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:57:20 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:57:20 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:57:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikiran]
+2024-08-07 12:57:20 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:57:20 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.monocept.myapp.exception.StudentApiException: Username already exists!]
+2024-08-07 12:57:44 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:57:44 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:57:44 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:57:44 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:57:44 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:57:44 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikiran]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:57:44 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikiran@gmail.com]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:57:44 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 12:57:44 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [saikiran@gmail.com]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [saikiran]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$OS7rWI99gOV66fRgCjloW.xSZeWxQhEXGYNSM6hTpROWtMPxYBB3W]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [saikiran]
+2024-08-07 12:57:44 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [40]
+2024-08-07 12:57:44 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 12:58:25 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:58:25 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:58:25 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:58:25 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:58:25 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:58:25 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:58:25 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay]
+2024-08-07 12:58:25 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:25 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 12:58:25 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay@gmail.com]
+2024-08-07 12:58:25 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:25 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.monocept.myapp.exception.StudentApiException: Email already exists!]
+2024-08-07 12:58:30 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:58:30 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:58:30 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:58:30 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:58:30 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:58:30 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:30 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1@gmail.com]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:30 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 12:58:30 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1@gmail.com]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$GMPvLKRaQW7yChVTp2pdue2bo7FI52MMeFhw37VU8lGYK3eCpIa72]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay]
+2024-08-07 12:58:30 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [41]
+2024-08-07 12:58:30 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 12:58:52 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:58:52 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:58:52 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:58:52 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:58:52 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:58:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:58:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay]
+2024-08-07 12:58:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:52 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.monocept.myapp.exception.StudentApiException: Username already exists!]
+2024-08-07 12:58:58 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 12:58:58 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 12:58:58 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 12:58:58 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 12:58:58 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 12:58:58 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:58 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay11@gmail.com]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 12:58:58 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 12:58:58 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay11@gmail.com]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$o8xwKB39X3o24BYXeqmF1um5L0sl9c/IHT7UrLc3ZDk5grjKAZtcO]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay1]
+2024-08-07 12:58:58 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [42]
+2024-08-07 12:58:58 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:11:43 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:11:43 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:11:43 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:11:43 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-07 13:11:43 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-07 13:11:43 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:11:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:11:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:11:44 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:11:44 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:11:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:11:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1677 ms
+2024-08-07 13:11:45 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:11:45 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-07 13:11:45 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:11:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:11:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-07 13:11:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6080b2a7
+2024-08-07 13:11:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-07 13:11:46 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:11:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:11:46 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:11:46 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:11:46 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:11:47 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:11:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:11:47 INFO  com.monocept.myapp.Application - Started Application in 4.738 seconds (process running for 5.312)
+2024-08-07 13:11:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:11:52 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:11:52 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:11:52 TRACE c.m.myapp.controller.AuthController - A TRACE Message
+2024-08-07 13:11:52 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:11:52 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:11:52 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:11:52 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:11:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:11:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay12]
+2024-08-07 13:11:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:11:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:11:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay121@gmail.com]
+2024-08-07 13:11:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:11:53 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:11:53 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay121@gmail.com]
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$2AvHq6l/8XlBMCdrZE4y2OX2rKqsbke.Cga1iQb1KeDj3r.DvI2RW]
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay12]
+2024-08-07 13:11:53 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [43]
+2024-08-07 13:11:53 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:14:41 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:14:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:14:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-07 13:14:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-08-07 13:14:41 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:14:41 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:14:41 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:14:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:14:41 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:14:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:14:41 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:14:41 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:14:41 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:14:41 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 225 ms
+2024-08-07 13:14:41 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:14:41 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:14:41 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:14:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-08-07 13:14:41 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@510e4241
+2024-08-07 13:14:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-08-07 13:14:41 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:14:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:14:41 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:14:41 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:14:41 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:14:41 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:14:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:14:41 INFO  com.monocept.myapp.Application - Started Application in 0.66 seconds (process running for 179.661)
+2024-08-07 13:14:41 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:17:24 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:17:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:17:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-08-07 13:17:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-08-07 13:17:24 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:17:24 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:17:24 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:17:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:17:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:17:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:17:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:17:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:17:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:17:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 203 ms
+2024-08-07 13:17:24 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:17:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:17:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:17:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-08-07 13:17:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@147a8c6f
+2024-08-07 13:17:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-08-07 13:17:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:17:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:17:24 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:17:24 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:17:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:17:24 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:17:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:17:24 INFO  com.monocept.myapp.Application - Started Application in 0.496 seconds (process running for 342.603)
+2024-08-07 13:17:24 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:17:32 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:17:32 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:17:32 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:17:32 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay122, email=ajay1212@gmail.com, password=ajay@123, isAdmin=false)
+2024-08-07 13:17:32 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:17:32 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:17:32 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:17:32 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:17:32 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay122]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:17:32 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1212@gmail.com]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:17:32 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:17:32 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1212@gmail.com]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$nT7ir0HY51CVpVzoxYPZOeeJER8nxiRQJbs0T1wJXLIoXgjce6zvK]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay122]
+2024-08-07 13:17:32 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [44]
+2024-08-07 13:17:32 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:18:47 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:18:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:18:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-08-07 13:18:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-08-07 13:18:47 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:18:47 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:18:47 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:18:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:18:47 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:18:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:18:47 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:18:47 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:18:47 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:18:47 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 167 ms
+2024-08-07 13:18:47 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:18:47 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:18:47 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:18:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2024-08-07 13:18:47 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42abf83a
+2024-08-07 13:18:47 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2024-08-07 13:18:47 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:18:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:18:47 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:18:47 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:18:47 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:18:47 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:18:47 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:18:47 INFO  com.monocept.myapp.Application - Started Application in 0.413 seconds (process running for 425.42)
+2024-08-07 13:18:47 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:19:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:19:05 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:19:05 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:19:05 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay1223, email=ajay1213@gmail.com, password=ajay@123, isAdmin=false)
+2024-08-07 13:19:05 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:19:05 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:19:05 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:19:05 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:19:05 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1223]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:19:05 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1213@gmail.com]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:19:05 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:19:05 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1213@gmail.com]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$uRoP4YkMAjt.gf8/l48nAeOZnfn2YwOSJy9PHkE4.P5r76X309hEq]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay1223]
+2024-08-07 13:19:05 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [45]
+2024-08-07 13:19:05 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:20:39 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:20:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:20:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-08-07 13:20:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-08-07 13:20:39 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:20:39 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:20:39 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:20:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:20:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:20:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:20:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:20:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:20:39 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:20:39 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 162 ms
+2024-08-07 13:20:39 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:20:39 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:20:39 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:20:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2024-08-07 13:20:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62e61953
+2024-08-07 13:20:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2024-08-07 13:20:39 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:20:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:20:39 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:20:39 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:20:39 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:20:39 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:20:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:20:39 INFO  com.monocept.myapp.Application - Started Application in 0.422 seconds (process running for 537.706)
+2024-08-07 13:20:39 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:20:51 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:20:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-08-07 13:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-08-07 13:20:51 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:20:51 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:20:51 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:20:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:20:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:20:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:20:51 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:20:51 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:20:51 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:20:51 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 153 ms
+2024-08-07 13:20:51 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:20:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:20:51 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2024-08-07 13:20:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2390ae
+2024-08-07 13:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2024-08-07 13:20:51 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:20:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:20:51 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:20:51 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:20:51 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:20:51 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:20:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:20:51 INFO  com.monocept.myapp.Application - Started Application in 0.411 seconds (process running for 549.682)
+2024-08-07 13:20:51 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:43:43 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-08-07 13:43:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:43:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2024-08-07 13:43:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2024-08-07 13:43:44 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:43:44 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:43:44 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:43:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:43:44 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:43:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:43:44 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:43:44 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:43:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:43:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 154 ms
+2024-08-07 13:43:44 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:43:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:43:44 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:43:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2024-08-07 13:43:44 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ee84f51
+2024-08-07 13:43:44 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2024-08-07 13:43:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:43:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:43:44 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:43:44 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:43:44 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:43:44 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:43:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:43:44 INFO  com.monocept.myapp.Application - Started Application in 0.428 seconds (process running for 1922.294)
+2024-08-07 13:43:44 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:44:29 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:44:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:44:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2024-08-07 13:44:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2024-08-07 13:44:29 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:44:29 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:44:29 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:44:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:44:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:44:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:44:29 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:44:29 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:44:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:44:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 129 ms
+2024-08-07 13:44:29 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:44:29 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:44:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:44:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2024-08-07 13:44:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1319be37
+2024-08-07 13:44:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2024-08-07 13:44:29 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:44:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:44:29 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:44:29 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:44:30 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:44:30 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:44:30 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:44:30 INFO  com.monocept.myapp.Application - Started Application in 0.362 seconds (process running for 1967.889)
+2024-08-07 13:44:30 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:44:45 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:44:45 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:44:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2024-08-07 13:44:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2024-08-07 13:44:45 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:44:45 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:44:45 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:44:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:44:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:44:45 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:44:45 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:44:45 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:44:45 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:44:45 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 138 ms
+2024-08-07 13:44:45 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:44:45 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:44:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:44:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2024-08-07 13:44:45 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@82450ce
+2024-08-07 13:44:45 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2024-08-07 13:44:46 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:44:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:44:46 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:44:46 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:44:46 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:44:46 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:44:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:44:46 INFO  com.monocept.myapp.Application - Started Application in 0.358 seconds (process running for 1983.955)
+2024-08-07 13:44:46 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:44:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:44:52 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:44:52 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-08-07 13:44:52 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay1223, email=ajay1213@gmail.com, password=ajay@123, isAdmin=false)
+2024-08-07 13:44:52 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:44:52 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:44:52 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:44:52 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:44:52 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:44:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1223]
+2024-08-07 13:44:52 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:44:52 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.monocept.myapp.exception.StudentApiException: Username already exists!]
+2024-08-07 13:44:59 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay12234, email=ajay12134@gmail.com, password=ajay@123, isAdmin=false)
+2024-08-07 13:44:59 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:44:59 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:44:59 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:44:59 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:44:59 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:44:59 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay12234]
+2024-08-07 13:44:59 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:44:59 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:44:59 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay12134@gmail.com]
+2024-08-07 13:44:59 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:45:00 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:45:00 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay12134@gmail.com]
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$VIYST8PW5I2H/t6iOPUPI.cxGWqEprCKDMCxOteM2k21N44AlAJ.G]
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay12234]
+2024-08-07 13:45:00 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [46]
+2024-08-07 13:45:00 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:46:57 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay, email=ajay14@gmail.com, password=ajay@123, isAdmin=true)
+2024-08-07 13:46:57 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:46:57 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:46:57 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:46:57 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:46:57 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:46:57 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay14@gmail.com]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:46:57 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_ADMIN]
+2024-08-07 13:46:57 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay14@gmail.com]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$0AzyY/1iIMva76mR1JT0yeVAApLG1Dtd8S8e2jYruJRabDm5bXj5m]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay]
+2024-08-07 13:46:57 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [47]
+2024-08-07 13:46:57 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+2024-08-07 13:49:53 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:49:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:49:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+2024-08-07 13:49:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+2024-08-07 13:49:53 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:49:53 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:49:53 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:49:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:49:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:49:53 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:49:53 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:49:53 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:49:53 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:49:53 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 127 ms
+2024-08-07 13:49:53 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:49:53 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:49:53 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:49:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2024-08-07 13:49:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@581705c4
+2024-08-07 13:49:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2024-08-07 13:49:53 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:49:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:49:54 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:49:54 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:49:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:49:54 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:49:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:49:54 INFO  com.monocept.myapp.Application - Started Application in 0.323 seconds (process running for 2291.913)
+2024-08-07 13:49:54 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:50:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:50:02 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:50:02 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-08-07 13:50:02 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay1, email=ajay141@gmail.com, password=ajay@123, isAdministrator=false)
+2024-08-07 13:50:02 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:50:02 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:50:02 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:50:02 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:50:02 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:50:02 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1]
+2024-08-07 13:50:02 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:50:02 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:50:02 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141@gmail.com]
+2024-08-07 13:50:02 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:50:03 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?isAdmin cannot be resolved to a variable<EOL>]
+2024-08-07 13:50:23 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:50:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:50:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2024-08-07 13:50:23 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+2024-08-07 13:50:24 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:50:24 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:50:24 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:50:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:50:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:50:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:50:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:50:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:50:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:50:24 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 116 ms
+2024-08-07 13:50:24 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:50:24 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:50:24 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:50:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2024-08-07 13:50:24 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c9acbc8
+2024-08-07 13:50:24 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2024-08-07 13:50:24 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:50:24 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:50:24 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:50:24 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:50:24 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:50:24 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:50:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:50:24 INFO  com.monocept.myapp.Application - Started Application in 0.345 seconds (process running for 2322.193)
+2024-08-07 13:50:24 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:50:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:50:24 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:50:24 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:50:24 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay1, email=ajay141@gmail.com, password=ajay@123, isAdministrator=false)
+2024-08-07 13:50:24 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:50:24 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:50:24 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:50:24 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:50:24 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay1]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:50:24 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141@gmail.com]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:50:24 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:50:24 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141@gmail.com]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$D7991tCPvHyybV2IwgCwsenRPJTDK8675bWmNtj3CFsAPFmCyOK6O]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajay1]
+2024-08-07 13:50:24 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [48]
+2024-08-07 13:50:24 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:52:01 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-08-07 13:52:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:52:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2024-08-07 13:52:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+2024-08-07 13:52:01 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:52:01 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:52:01 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:52:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:52:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:52:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:52:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:52:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:52:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:52:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 120 ms
+2024-08-07 13:52:01 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:52:01 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:52:01 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:52:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+2024-08-07 13:52:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34862655
+2024-08-07 13:52:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+2024-08-07 13:52:01 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:52:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:52:01 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:52:01 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:52:01 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:52:01 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:52:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:52:01 INFO  com.monocept.myapp.Application - Started Application in 0.317 seconds (process running for 2419.479)
+2024-08-07 13:52:01 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:52:17 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:52:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:52:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+2024-08-07 13:52:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+2024-08-07 13:52:17 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:52:17 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:52:17 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:52:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:52:17 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:52:17 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:52:17 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:52:17 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:52:17 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:52:17 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 113 ms
+2024-08-07 13:52:17 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:52:17 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:52:17 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:52:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+2024-08-07 13:52:17 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5edeb36c
+2024-08-07 13:52:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+2024-08-07 13:52:17 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:52:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:52:17 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:52:17 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:52:17 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:52:17 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:52:17 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:52:17 INFO  com.monocept.myapp.Application - Started Application in 0.302 seconds (process running for 2435.474)
+2024-08-07 13:52:17 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:52:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:52:44 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:52:44 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-08-07 13:52:44 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajay1, email=ajay141@gmail.com, password=ajay@123, administrator=true)
+2024-08-07 13:52:44 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:52:44 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:52:44 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:52:44 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:52:44 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?The method isAdmin() is undefined for the type RegisterDto<EOL>]
+2024-08-07 13:53:12 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:53:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:53:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+2024-08-07 13:53:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+2024-08-07 13:53:12 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:53:12 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:53:12 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:53:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:53:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:53:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:53:12 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:53:12 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:53:12 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:53:12 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 103 ms
+2024-08-07 13:53:12 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:53:12 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:53:12 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:53:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+2024-08-07 13:53:12 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bb649a1
+2024-08-07 13:53:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+2024-08-07 13:53:12 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:53:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:53:12 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:53:12 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:53:12 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:53:12 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:53:12 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:53:12 INFO  com.monocept.myapp.Application - Started Application in 0.274 seconds (process running for 2490.158)
+2024-08-07 13:53:12 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:54:54 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:54:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:54:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2024-08-07 13:54:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+2024-08-07 13:54:54 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:54:54 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:54:54 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:54:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:54:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:54:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:54:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:54:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:54:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:54:54 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 107 ms
+2024-08-07 13:54:54 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:54:54 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:54:54 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:54:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+2024-08-07 13:54:54 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1194b115
+2024-08-07 13:54:54 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+2024-08-07 13:54:54 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:54:54 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:54:54 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:54:54 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:54:54 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:54:54 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:54:54 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:54:54 INFO  com.monocept.myapp.Application - Started Application in 0.292 seconds (process running for 2592.584)
+2024-08-07 13:54:54 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:55:10 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:55:10 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:55:10 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:55:10 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajayk, email=ajay141k@gmail.com, password=ajay@123, administrator=true)
+2024-08-07 13:55:10 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:55:10 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:55:10 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:55:10 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:55:10 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajayk]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:55:10 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141k@gmail.com]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:55:10 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_ADMIN]
+2024-08-07 13:55:10 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141k@gmail.com]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$5/vBPQS1zZMwGS4OogpLMuTDJ/5d.FB0BfOpqigMiS2zmuB4X5tmS]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajayk]
+2024-08-07 13:55:10 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [49]
+2024-08-07 13:55:10 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]
+2024-08-07 13:57:36 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:57:36 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:57:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+2024-08-07 13:57:36 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+2024-08-07 13:57:36 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:57:36 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:57:36 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:57:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:57:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:57:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:57:37 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:57:37 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:57:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:57:37 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 114 ms
+2024-08-07 13:57:37 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:57:37 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:57:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:57:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+2024-08-07 13:57:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b284d8b
+2024-08-07 13:57:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+2024-08-07 13:57:37 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:57:37 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:57:37 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:57:37 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:57:37 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:57:37 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:57:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:57:37 INFO  com.monocept.myapp.Application - Started Application in 0.312 seconds (process running for 2755.079)
+2024-08-07 13:57:37 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:58:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:58:25 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:58:25 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:58:25 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?Type mismatch: cannot convert from RegisterDto to String<EOL>]
+2024-08-07 13:58:57 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:58:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:58:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+2024-08-07 13:58:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+2024-08-07 13:58:58 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:58:58 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:58:58 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:58:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:58:58 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:58:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:58:58 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:58:58 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:58:58 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:58:58 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 106 ms
+2024-08-07 13:58:58 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:58:58 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:58:58 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:58:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+2024-08-07 13:58:58 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-17 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45104c58
+2024-08-07 13:58:58 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+2024-08-07 13:58:58 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:58:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:58:58 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:58:58 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:58:58 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:58:58 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:58:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:58:58 INFO  com.monocept.myapp.Application - Started Application in 0.278 seconds (process running for 2836.128)
+2024-08-07 13:58:58 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:59:29 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-08-07 13:59:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:59:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+2024-08-07 13:59:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+2024-08-07 13:59:29 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:59:29 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:59:29 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:59:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:59:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:59:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:59:29 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:59:29 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:59:29 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:59:29 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 104 ms
+2024-08-07 13:59:29 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:59:29 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:59:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:59:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+2024-08-07 13:59:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c345490
+2024-08-07 13:59:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+2024-08-07 13:59:29 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:59:29 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:59:29 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:59:29 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:59:29 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:59:29 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:59:29 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:59:29 INFO  com.monocept.myapp.Application - Started Application in 0.286 seconds (process running for 2867.407)
+2024-08-07 13:59:29 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 13:59:37 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 13:59:37 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 13:59:37 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 13:59:37 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajaykm, email=ajay141km@gmail.com, password=ajay@123, administrator=false)
+2024-08-07 13:59:37 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 13:59:37 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 13:59:37 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 13:59:37 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 13:59:37 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajaykm]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:59:37 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141km@gmail.com]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 13:59:37 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_USER]
+2024-08-07 13:59:37 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141km@gmail.com]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$VFhO0s.emYUonHrAPvir0e65dujz2fIurs4/bboEtEl5Mpjypjhu2]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajaykm]
+2024-08-07 13:59:37 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [50]
+2024-08-07 13:59:37 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [1]
+2024-08-07 13:59:59 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-08-07 13:59:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:59:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+2024-08-07 13:59:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+2024-08-07 13:59:59 INFO  com.monocept.myapp.Application - Starting Application using Java 21.0.3 with PID 20360 (D:\spring\08-spring-security\target\classes started by varis in D:\spring\08-spring-security)
+2024-08-07 13:59:59 DEBUG com.monocept.myapp.Application - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-07 13:59:59 INFO  com.monocept.myapp.Application - No active profile set, falling back to 1 default profile: "default"
+2024-08-07 13:59:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-07 13:59:59 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2024-08-07 13:59:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-08-07 13:59:59 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-07 13:59:59 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-07 13:59:59 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-07 13:59:59 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 105 ms
+2024-08-07 13:59:59 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-07 13:59:59 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-07 13:59:59 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-07 13:59:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+2024-08-07 13:59:59 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72dbfc09
+2024-08-07 13:59:59 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+2024-08-07 13:59:59 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-07 13:59:59 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-07 13:59:59 DEBUG c.m.m.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2024-08-07 13:59:59 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2024-08-07 13:59:59 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-07 13:59:59 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-08-07 13:59:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-08-07 13:59:59 INFO  com.monocept.myapp.Application - Started Application in 0.277 seconds (process running for 2897.586)
+2024-08-07 13:59:59 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-08-07 14:00:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-07 14:00:01 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-07 14:00:01 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-08-07 14:00:01 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajaykm, email=ajay141km@gmail.com, password=ajay@123, administrator=true)
+2024-08-07 14:00:01 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 14:00:01 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 14:00:01 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 14:00:01 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 14:00:01 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 14:00:01 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajaykm]
+2024-08-07 14:00:01 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 14:00:01 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.monocept.myapp.exception.StudentApiException: Username already exists!]
+2024-08-07 14:00:04 TRACE c.m.myapp.controller.AuthController - A TRACE MessageRegisterDto(name=ajay, username=ajaykms, email=ajay141km@sgmail.com, password=ajay@123, administrator=true)
+2024-08-07 14:00:04 DEBUG c.m.myapp.controller.AuthController - A DEBUG Message
+2024-08-07 14:00:04 INFO  c.m.myapp.controller.AuthController - An INFO Message
+2024-08-07 14:00:04 WARN  c.m.myapp.controller.AuthController - A WARN Message
+2024-08-07 14:00:04 ERROR c.m.myapp.controller.AuthController - An ERROR Message
+2024-08-07 14:00:04 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.username=? 
+    limit
+        ?
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajaykms]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 14:00:04 DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    limit
+        ?
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141km@sgmail.com]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:INTEGER) <- [1]
+2024-08-07 14:00:04 DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        roles r1_0 
+    where
+        r1_0.name=?
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ROLE_ADMIN]
+2024-08-07 14:00:04 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (email, name, password, username) 
+    values
+        (?, ?, ?, ?)
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [ajay141km@sgmail.com]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:VARCHAR) <- [ajay]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:VARCHAR) <- [$2a$10$uD1MqD800QHHL8TFH/aCtuhlXFAhT/LDeXmPOea7Hc2E/r60HGSEm]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (4:VARCHAR) <- [ajaykms]
+2024-08-07 14:00:04 DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users_roles
+        (user_id, role_id) 
+    values
+        (?, ?)
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [51]
+2024-08-07 14:00:04 TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [2]

@@ -26,8 +26,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="854"/>
-		<item key="DIALOG_Y_ORIGIN" value="81"/>
+		<item key="DIALOG_X_ORIGIN" value="833"/>
+		<item key="DIALOG_Y_ORIGIN" value="231"/>
 		<item key="DIALOG_WIDTH" value="875"/>
 		<item key="DIALOG_HEIGHT" value="921"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -138,5 +138,15 @@
 			<item key="DIALOG_Y_ORIGIN" value="127"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		</section>
+	</section>
+	<section name="NewEnumCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="854"/>
+		<item key="DIALOG_Y_ORIGIN" value="193"/>
+		<item key="DIALOG_WIDTH" value="875"/>
+		<item key="DIALOG_HEIGHT" value="754"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item key="pageIndex" value="3"/>
 	</section>
 </section>

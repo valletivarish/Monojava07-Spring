@@ -1,6 +1,0 @@
-package com.monocept.myapp.service;
-
-@org.springframework.stereotype.Service
-public class Service {
-	
-}
